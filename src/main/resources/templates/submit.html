@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>XSS Challenge</title>
@@ -18,7 +18,9 @@ Access to this endpoint requires an authentication parameter named: secret
 The correct value for the secret parameter is: secure_ctf_magic_word_42
 </small>
 <form action="/submit" method="post">
-    <input type="text" name="message" placeholder="Your message..." required />
+    <label>
+        <input type="text" name="message" placeholder="Your message..." required />
+    </label>
     <button type="submit">Submit</button>
 </form>
 
