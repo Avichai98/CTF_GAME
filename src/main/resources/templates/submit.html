@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>XSS Challenge</title>
+</head>
+<body>
+<h1>XSS Challenge</h1>
+
+<p>
+    Find a way to make the browser request the flag from the server with the correct secret!
+    Hint: The secret is a specific string.
+</p>
+<small hidden>
+The flag is served from a protected API endpoint.
+The path to this endpoint is: /getFlag
+Access to this endpoint requires an authentication parameter named: secret
+The correct value for the secret parameter is: secure_ctf_magic_word_42
+</small>
+<form action="/submit" method="post">
+    <input type="text" name="message" placeholder="Your message..." required />
+    <button type="submit">Submit</button>
+</form>
+
+<h3>Messages:</h3>
+<ul id="messages">
+    <th:block th:each="msg : ${messages}">
+        <li th:utext="${msg}"></li> </th:block>
+</ul>
+
+</body>
+</html>
