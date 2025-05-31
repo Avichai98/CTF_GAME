@@ -15,8 +15,7 @@ To run this CTF challenge, you'll need:
 
 1.  **Clone this repository:**
     ```bash
-    git clone <your-repo-url>
-    cd <your-repo-name>
+    git clone https://github.com/Avichai98/CTF_GAME.git
     ```
     (Replace `<your-repo-url>` and `<your-repo-name>` with your actual GitHub repository details).
 
